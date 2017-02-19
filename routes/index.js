@@ -6,14 +6,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/challenge', function(req, res, next) {
-  console.log('in challenge');
+router.get('/api/v1/challenges', function(req, res, next) {
+  // console.log('in challenge');
   var json = JSON.parse(challengeJSON);
   res.json(json);
 });
 
-router.get('/user', function(req, res, next) {
-  console.log('in user');
+router.get('/api/v1/users', function(req, res, next) {
+  // console.log('in user');
   var json = JSON.parse(userJSON);
   res.json(json);
 });
